@@ -1,28 +1,33 @@
 'use strict'
 
-const http = require('http')
+const config = require('./config')
+const protocol = /https/.test(config.SITEMAP_URL) ? 'https' : 'http'
+const http = require(protocol)
 const xlsx = require('tfk-json-to-xlsx')
 const smtaStream = require('sitemap-to-array').stream
-const config = require('./config')
 const findLinksOnPage = require('./lib/find-links-on-page')
 const checkLinksStatus = require('./lib/check-links-status')
 var pages = []
 
-const writeResults = (error, results) => {
+function writeResults (error, results) {
   if (error) {
     console.error(error)
   } else {
-    xlsx.write(config.REPORT_FILE_PATH, results, error => {
-      if (error) {
-        console.error(error)
-      } else {
-        console.log('Finished writing file')
-      }
-    })
+    if (results.length > 0) {
+      xlsx.write(config.REPORT_FILE_PATH, results, error => {
+        if (error) {
+          console.error(error)
+        } else {
+          console.log('Finished writing file')
+        }
+      })
+    } else {
+      console.log('No broken links to report')
+    }
   }
 }
 
-const handleLinks = (error, data) => {
+function handleLinks (error, data) {
   if (error) {
     console.error(error)
   } else {
@@ -30,7 +35,7 @@ const handleLinks = (error, data) => {
   }
 }
 
-const handlePages = pagesToCheck => {
+function handlePages (pagesToCheck) {
   findLinksOnPage(pagesToCheck, handleLinks)
 }
 
