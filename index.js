@@ -2,84 +2,37 @@
 
 const http = require('http')
 const xlsx = require('tfk-json-to-xlsx')
-const pageLinks = require('pagelinks')
-const urlStatusCode = require('url-status-code')
 const smtaStream = require('sitemap-to-array').stream
 const config = require('./config')
-var links = []
+const findLinksOnPage = require('./lib/find-links-on-page')
+const checkLinksStatus = require('./lib/check-links-status')
 var pages = []
-var results = []
 
-function findLinksOnPages (pages) {
-  var list = JSON.parse(JSON.stringify(pages))
 
-  function next () {
-    if (list.length > 0) {
-      const page = list.pop()
-      if (page) {
-        console.log(list.length + ' pages remaining.')
-        pageLinks(page, (error, data) => {
-          if (error) {
-            console.error(error)
-          } else {
-            data.forEach(item => {
-              links.push({
-                url: page,
-                link: item.href
-              })
-            })
-          }
-        })
+const writeResults = (error, results) => {
+  if (error) {
+    console.error(error)
+  } else {
+    xlsx.write(config.REPORT_FILE_PATH, results, error => {
+      if (error) {
+        console.error(error)
       } else {
-        next()
+        console.log('Finished writing file')
       }
-    } else {
-      console.log('Finished collecting links')
-      checkLinkStatus(links)
-    }
+    })
   }
-  next()
 }
 
-function checkLinkStatus (pages) {
-  var list = JSON.parse(JSON.stringify(pages))
-
-  function next () {
-    if (list.length > 0) {
-      const page = list.pop()
-      if (page) {
-        console.log(list.length + ' pages remaining.')
-        xrayPage(page, function (error, data) {
-          if (error) {
-            console.error(error)
-          } else {
-            var pageData = repackContent(data)
-            pageData.url = page
-            pageData.lix = lix(pageData.content)
-            measures.push({
-              url: pageData.url,
-              title: pageData.title,
-              lix: pageData.lix
-            })
-            next()
-          }
-        })
-      } else {
-        next()
-      }
-    } else {
-      console.log('Finished measuring')
-      xlsx.write(config.REPORT_FILE_PATH, measures, function (error) {
-        if (error) {
-          console.error(error)
-        } else {
-          console.log('Finished writing file')
-        }
-      })
-    }
+const handleLinks = (error, data) => {
+  if (error) {
+    console.error(error)
+  } else {
+    checkLinksStatus(data, writeResults)
   }
+}
 
-  next()
+const handlePages = pages => {
+  findLinksOnPage(pagesToCheck, handleLinks)
 }
 
 smtaStream.on('data', data => {
@@ -89,7 +42,7 @@ smtaStream.on('data', data => {
 
 smtaStream.on('end', () => {
   console.log('Finished collecting pages')
-  findLinksOnPages(pages)
+  handlePages(pages)
 })
 
 http.get(config.SITEMAP_URL, response => {
