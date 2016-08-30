@@ -1,0 +1,46 @@
+{
+  "name": "deadlinks-report-website",
+  "version": "1.0.0",
+  "description": "Deadlinks reporter",
+  "license": "MIT",
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  },
+  "bugs": {
+    "url": "https://github.com/telemark/lix-report-website/issues"
+  },
+  "homepage": "https://github.com/telemark/lix-report-website",
+  "main": "index.js",
+  "engines": {
+    "node": ">=4.5.0"
+  },
+  "scripts": {
+    "test": "standard && nsp check && tap --reporter=spec test/*.js",
+    "coverage": "tap test/*.js --coverage",
+    "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls",
+    "setup": "npm install && node setup.js",
+    "standard-fix": "standard --fix",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/telemark/lix-report-website.git"
+  },
+  "devDependencies": {
+    "coveralls": "2.11.12",
+    "nsp": "2.6.1",
+    "standard": "8.0.0",
+    "tap": "7.0.0"
+  },
+  "dependencies": {
+    "lix": "2.0.1",
+    "normalize-html-whitespace": "0.2.0",
+    "pagelinks": "2.0.1",
+    "sitemap-to-array": "4.0.0",
+    "tfk-json-to-xlsx": "1.0.1",
+    "url-status-code": "1.0.6",
+    "x-ray": "2.3.0"
+  }
+}
