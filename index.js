@@ -8,7 +8,6 @@ const findLinksOnPage = require('./lib/find-links-on-page')
 const checkLinksStatus = require('./lib/check-links-status')
 var pages = []
 
-
 const writeResults = (error, results) => {
   if (error) {
     console.error(error)
@@ -31,7 +30,7 @@ const handleLinks = (error, data) => {
   }
 }
 
-const handlePages = pages => {
+const handlePages = pagesToCheck => {
   findLinksOnPage(pagesToCheck, handleLinks)
 }
 
