@@ -1,1 +1,34 @@
 # deadlinks-report-website
+
+Use your sitemap.xml as base for checking all external links from your website.
+
+## Installation
+
+Clone or download the repo from GitHub
+
+```sh
+$ git clone git@github.com:telemark/deadlinks-report-website.git
+```
+
+## Setup
+
+cd into directory and run the setup script to install all dependencies
+``
+```sh
+$ npm run setup
+```
+
+## Usage
+
+Setup the [config-file](config/index.js) with your environment.
+
+Run the script
+
+```sh
+$ npm start
+```
+
+This will generate an .xlsx-file with all the links that failed.
+
+## License
+[MIT](LICENSE)
