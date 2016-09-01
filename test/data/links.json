@@ -1,94 +1,66 @@
 [
   {
-    "url": "http://www.telemark.no",
-    "link": "https://postlister.t-fk.no"
+    "link": "http://bypakka.no/layout/set/pdf/Bilfri/Sykkel",
+    "urls": [
+      "https://bypakka.no/Bilfri/Sykkel",
+      "https://bypakka.no/Bilfri/Sykkel"
+    ]
   },
   {
-    "url": "http://www.telemark.no",
-    "link": "http://www.telemark.no/Politikk/Moeteplan"
+    "link": "http://www.facebook.com/sharer.php?u=http://bypakka.no/Bilfri/Sykkel",
+    "urls": [
+      "https://bypakka.no/Bilfri/Sykkel"
+    ]
   },
   {
-    "url": "http://www.telemark.no",
-    "link": "http://www.telemark.no/Vaare-tjenester/Folkehelse/Aktuelt/Fagene-flytter-ut-2016"
+    "link": "http://twitter.com/home?status=http://bypakka.no/Bilfri/Sykkel",
+    "urls": [
+      "https://bypakka.no/Bilfri/Sykkel"
+    ]
   },
   {
-    "url": "http://www.telemark.no",
-    "link": "http://www.telemark.no/Vaare-tjenester/Arealbruk-og-transport/Skoleskyss"
+    "link": "https://plus.google.com/share?http://bypakka.no/Bilfri/Sykkel",
+    "urls": [
+      "https://bypakka.no/Bilfri/Sykkel"
+    ]
   },
   {
-    "url": "http://www.telemark.no",
-    "link": "http://www.telemark.no/Vaare-tjenester/Utdanning/For-privatister/Foer-eksamen2/Hvordan-melde-seg-opp"
+    "link": "http://www.facebook.com/BypakkeGrenland",
+    "urls": [
+      "https://bypakka.no/Bilfri/Sykkel",
+      "https://bypakka.no/Aktuelt/Hold-deg-oppdatert-paa-bypakka.no"
+    ]
   },
   {
-    "url": "http://www.telemark.no",
-    "link": "http://www.telemark.no/Vaare-tjenester/Kulturminner/Maanedens-kulturminne/Norges-eldste-drivhus"
+    "link": "http://www.telemark.no/Vaare-tjenester/Arealbruk-og-transport#.ULdrLKU_tHI",
+    "urls": [
+      "https://bypakka.no/Bilfri/Sykkel",
+      "https://bypakka.no/Aktuelt/Hold-deg-oppdatert-paa-bypakka.no"
+    ]
   },
   {
-    "url": "http://www.telemark.no",
-    "link": "http://www.telemark.no/Vaare-tjenester/Miljoe-og-friluftsliv/Aktuelt/Heiplansamlinga-2016-Attraktiv-reisemaalsutvikling-i-fjellet"
+    "link": "http://bypakka.no/layout/set/pdf/Aktuelt/Hold-deg-oppdatert-paa-bypakka.no",
+    "urls": [
+      "https://bypakka.no/Aktuelt/Hold-deg-oppdatert-paa-bypakka.no",
+      "https://bypakka.no/Aktuelt/Hold-deg-oppdatert-paa-bypakka.no"
+    ]
   },
   {
-    "url": "http://www.telemark.no",
-    "link": "http://www.telemark.no/Planer/Regional-planstrategi/Offentlig-ettersyn-ny-regional-planstrategi"
+    "link": "http://www.facebook.com/sharer.php?u=http://bypakka.no/Aktuelt/Hold-deg-oppdatert-paa-bypakka.no",
+    "urls": [
+      "https://bypakka.no/Aktuelt/Hold-deg-oppdatert-paa-bypakka.no"
+    ]
   },
   {
-    "url": "http://www.telemark.no",
-    "link": "http://www.telemark.no/Vaare-tjenester/Arealbruk-og-transport/Loeyver/Ledige-drosjeloeyver"
+    "link": "http://twitter.com/home?status=http://bypakka.no/Aktuelt/Hold-deg-oppdatert-paa-bypakka.no",
+    "urls": [
+      "https://bypakka.no/Aktuelt/Hold-deg-oppdatert-paa-bypakka.no"
+    ]
   },
   {
-    "url": "http://www.telemark.no",
-    "link": "https://www.facebook.com/telemarkfylke"
-  },
-  {
-    "url": "http://www.telemark.no",
-    "link": "https://twitter.com/telemarkfylke"
-  },
-  {
-    "url": "http://www.telemark.no",
-    "link": "https://plus.google.com/108353607427028279455/"
-  },
-  {
-    "url": "http://www.telemark.no",
-    "link": "http://www.telemark.no/Aktuelt"
-  },
-  {
-    "url": "http://www.telemark.no",
-    "link": "https://postlister.t-fk.no"
-  },
-  {
-    "url": "http://www.telemark.no",
-    "link": "http://apps.t-fk.no/api"
-  },
-  {
-    "url": "http://www.telemark.no",
-    "link": "http://193.71.49.211/fmbute"
-  },
-  {
-    "url": "http://www.telemark.no",
-    "link": "https://twitter.com/telemarkfylke"
-  },
-  {
-    "url": "http://www.telemark.no",
-    "link": "https://www.facebook.com/telemarkfylke"
-  },
-  {
-    "url": "http://www.telemark.no",
-    "link": "https://plus.google.com/u/0/b/108353607427028279455/108353607427028279455"
-  },
-  {
-    "url": "http://www.telemark.no",
-    "link": "https://www.google.com/maps/preview?f=q&source=s_q&hl=en&geocode=&q=Fylkesbakken+10,+Skien,+Norge&aq=0&oq=fylkesbakken+10&sll=37.0625,-95.677068&sspn=39.184175,87.978516&vpsrc=6&t=v&ie=UTF8&hq=&hnear=Fylkesbakken+10,+3715+Skien,+Telemark,+Norway&ll=59.216674,9.611161&spn=0.012388,0.042958&z=15&iwloc=A"
-  },
-  {
-    "url": "http://www.telemark.no",
-    "link": "http://apps.t-fk.no/ansatte"
-  },
-  {
-    "url": "http://www.telemark.no",
-    "link": "https://politikerservice.t-fk.no"
-  },
-  {
-    "url": "http://www.telemark.no",
-    "link": "https://docs.google.com/spreadsheet/viewform?formkey=dDFHcVlIQW43eHhjWUdXSlh2WVVlUEE6MQ"
+    "link": "https://plus.google.com/share?http://bypakka.no/Aktuelt/Hold-deg-oppdatert-paa-bypakka.no",
+    "urls": [
+      "https://bypakka.no/Aktuelt/Hold-deg-oppdatert-paa-bypakka.no"
+    ]
   }
 ]
