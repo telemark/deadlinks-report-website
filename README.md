@@ -15,7 +15,7 @@ $ git clone git@github.com:telemark/deadlinks-report-website.git
 ## Setup
 
 cd into directory and run the setup script to install all dependencies
-``
+
 ```sh
 $ npm run setup
 ```
