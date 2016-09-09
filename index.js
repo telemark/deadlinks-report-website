@@ -2,6 +2,7 @@
 
 const config = require('./config')
 const protocol = /https/.test(config.SITEMAP_URL) ? 'https' : 'http'
+const fs = require('fs')
 const http = require(protocol)
 const xlsx = require('tfk-json-to-xlsx')
 const smtaStream = require('sitemap-to-array').stream
@@ -14,7 +15,8 @@ function writeResults (error, results) {
     console.error(error)
   } else {
     if (results.length > 0) {
-      xlsx.write(config.REPORT_FILE_PATH, results, error => {
+      const fileName = `${config.REPORT_DIRECTORY_PATH}/${config.REPORT_FILE_PATH}`
+      xlsx.write(fileName, results, error => {
         if (error) {
           console.error(error)
         } else {
@@ -31,6 +33,8 @@ function handleLinks (error, data) {
   if (error) {
     console.error(error)
   } else {
+    const fileName = `${config.REPORT_DIRECTORY_PATH}/links.json`
+    fs.writeFileSync(fileName, JSON.stringify(data, null, 2))
     checkLinksStatus(data, writeResults)
   }
 }
