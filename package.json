@@ -1,6 +1,6 @@
 {
   "name": "deadlinks-report-website",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Deadlinks reporter",
   "license": "MIT",
   "author": {
@@ -26,7 +26,8 @@
     "collect-pages": "node collect-pages.js",
     "collect-links": "node collect-links.js",
     "generate-jobs": "node generate-jobs.js",
-    "do-jobs": "node do-jobs.js"
+    "check-links": "node do-jobs.js",
+    "generate-report": "node lib/generate-report.js"
   },
   "repository": {
     "type": "git",

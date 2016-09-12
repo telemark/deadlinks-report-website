@@ -24,11 +24,29 @@ $ npm run setup
 
 Setup the [config-file](config/index.js) with your environment.
 
-Run the script
+Run the scripts
 
 ```sh
-$ npm start
+$ npm run collect-pages
 ```
+
+```sh
+$ npm run collect-links
+```
+
+```sh
+$ npm run generate-jobs
+```
+
+```sh
+$ npm run check-links
+```
+
+```sh
+$ npm run generate-report
+```
+
+
 
 This will generate an .xlsx-file with all the links that failed.
 
