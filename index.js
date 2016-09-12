@@ -1,11 +1,11 @@
 'use strict'
 
+const args = process.argv.slice(2)
 const config = require('./config')
 const protocol = /https/.test(config.SITEMAP_URL) ? 'https' : 'http'
 const fs = require('fs')
 const http = require(protocol)
 const xlsx = require('tfk-json-to-xlsx')
-const smtaStream = require('sitemap-to-array').stream
 const findLinksOnPage = require('./lib/find-links-on-page')
 const checkLinksStatus = require('./lib/check-links-status')
 var pages = []
@@ -43,17 +43,23 @@ function handlePages (pagesToCheck) {
   findLinksOnPage(pagesToCheck, handleLinks)
 }
 
-smtaStream.on('data', data => {
-  const json = JSON.parse(data.toString())
-  pages.push(json.loc)
-})
+if (args.length === 1) {
+  const linksToCheck = require(args[0])
+  checkLinksStatus(linksToCheck, handleLinks)
+} else {
+  const smtaStream = require('sitemap-to-array').stream
+  smtaStream.on('data', data => {
+    const json = JSON.parse(data.toString())
+    pages.push(json.loc)
+  })
 
-smtaStream.on('end', () => {
-  console.log('Finished collecting pages')
-  handlePages(pages)
-})
+  smtaStream.on('end', () => {
+    console.log('Finished collecting pages')
+    handlePages(pages)
+  })
 
-http.get(config.SITEMAP_URL, response => {
-  response
-    .pipe(smtaStream)
-})
+  http.get(config.SITEMAP_URL, response => {
+    response
+      .pipe(smtaStream)
+  })
+}
