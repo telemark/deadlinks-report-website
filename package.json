@@ -1,6 +1,6 @@
 {
   "name": "deadlinks-report-website",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Deadlinks reporter",
   "license": "MIT",
   "author": {
@@ -22,8 +22,11 @@
     "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls",
     "setup": "npm install && node setup.js",
     "standard-fix": "standard --fix",
-    "start": "node index.js",
-    "start-from-file": "node index.js './reports/links.json'"
+    "start": "node example.js",
+    "collect-pages": "node collect-pages.js",
+    "collect-links": "node collect-links.js",
+    "generate-jobs": "node generate-jobs.js",
+    "do-jobs": "node do-jobs.js"
   },
   "repository": {
     "type": "git",
@@ -37,9 +40,11 @@
   },
   "dependencies": {
     "md5": "2.2.1",
+    "mississippi": "1.2.0",
     "pagelinks": "2.0.1",
     "sitemap-to-array": "4.0.0",
     "tfk-json-to-xlsx": "1.0.1",
-    "url-status-code": "1.0.8"
+    "url-status-code": "1.0.8",
+    "uuid": "2.0.2"
   }
 }
