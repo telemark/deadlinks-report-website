@@ -1,6 +1,6 @@
 'use strict'
 
-const linkChecker = require('./do-jobs')
+const linkChecker = require('./do-job')
 
 linkChecker({}, function (error, message) {
   if (error) {
