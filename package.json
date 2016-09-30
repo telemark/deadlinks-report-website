@@ -27,7 +27,8 @@
     "collect-links": "node collect-links.js",
     "generate-jobs": "node generate-jobs.js",
     "check-links": "node do-jobs.js",
-    "generate-report": "node lib/generate-report.js"
+    "generate-report": "node lib/generate-report.js",
+    "cleanup": "node cleanup-everything.js"
   },
   "repository": {
     "type": "git",

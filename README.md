@@ -46,6 +46,10 @@ $ npm run check-links
 $ npm run generate-report
 ```
 
+```sh
+$ npm run cleanup
+```
+
 
 
 This will generate an .xlsx-file with all the links that failed.
