@@ -2,12 +2,13 @@
 
 const fs = require('fs')
 const config = require('./config')
-const isDeletableFile = file => file.indexOf('.json') > -1 || file.indexOf('.xlxs') > -1
+const isDeletableFile = file => file.indexOf('.json') > -1 || file.indexOf('.xlsx') > -1
 
 function cleanDirectory (directory) {
-  const files = fs.readdirSync(directory).filter(isDeletableFile).length
+  const files = fs.readdirSync(directory).filter(isDeletableFile)
 
-  files.forEach((fileName) => {
+  files.forEach((file) => {
+    const fileName = `${directory}/${file}`
     fs.unlink(fileName)
   })
 
