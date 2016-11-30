@@ -42,17 +42,20 @@ $ npm run generate-jobs
 $ npm run check-links
 ```
 
+This will generate an .xlsx-file with all the links that failed.
+
+
 ```sh
 $ npm run generate-report
 ```
+
+To cleanup everything use
 
 ```sh
 $ npm run cleanup
 ```
 
 
-
-This will generate an .xlsx-file with all the links that failed.
 
 ## License
 [MIT](LICENSE)
