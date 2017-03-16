@@ -1,6 +1,6 @@
 {
   "name": "deadlinks-report-website",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "description": "Deadlinks reporter",
   "license": "MIT",
   "private": true,
