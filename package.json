@@ -47,7 +47,7 @@
     "pagelinks": "2.0.1",
     "sitemap-to-array": "4.0.0",
     "tfk-json-to-xlsx": "1.0.11",
-    "url-status-code": "1.0.12",
+    "url-status-code": "1.1.0",
     "uuid": "3.0.1"
   }
 }
