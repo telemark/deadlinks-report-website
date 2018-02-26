@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "md5": "2.2.1",
-    "mississippi": "2.0.0",
+    "mississippi": "3.0.0",
     "pagelinks": "2.0.1",
     "sitemap-to-array": "5.0.0",
     "tfk-json-to-xlsx": "1.0.11",
