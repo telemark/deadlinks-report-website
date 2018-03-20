@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports = {
   REPORT_DIRECTORY_PATH: process.env.REPORT_DIRECTORY_PATH || 'reports',
   REPORT_FILE_PATH: process.env.REPORT_FILE_PATH || 'deadlinks-report.xlsx',

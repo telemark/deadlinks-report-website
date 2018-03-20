@@ -12,16 +12,15 @@
   "bugs": {
     "url": "https://github.com/telemark/deadlinks-report-website/issues"
   },
-  "homepage": "https://github.com/telemark/deadlinks-report-website",
+  "homepage": "https://github.com/telemark/deadlinks-report-website#readme",
   "main": "index.js",
   "engines": {
-    "node": ">=4.6.2"
+    "node": ">=8.10.0"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
     "coverage": "tap test/**/*.js --coverage",
     "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
-    "setup": "npm install && node setup.js",
     "standard-fix": "standard --fix",
     "start": "node example.js",
     "collect-pages": "node collect-pages.js",
@@ -29,11 +28,12 @@
     "generate-jobs": "node generate-jobs.js",
     "check-links": "node do-jobs.js",
     "generate-report": "node lib/generate-report.js",
-    "cleanup": "node cleanup-everything.js"
+    "cleanup": "node cleanup-everything.js",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/telemark/deadlinks-report-website.git"
+    "url": "git+https://github.com/telemark/deadlinks-report-website.git"
   },
   "devDependencies": {
     "coveralls": "3.0.0",
@@ -45,7 +45,7 @@
     "md5": "2.2.1",
     "mississippi": "3.0.0",
     "pagelinks": "2.0.1",
-    "sitemap-to-array": "5.0.0",
+    "sitemap-to-array": "5.0.1",
     "tfk-json-to-xlsx": "1.0.11",
     "url-status-code": "1.1.0",
     "uuid": "3.2.1"
