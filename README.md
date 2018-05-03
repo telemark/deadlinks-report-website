@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/telemark/deadlinks-report-website.svg?branch=master)](https://travis-ci.org/telemark/deadlinks-report-website)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
-[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/deadlinks-report-website.svg)](https://greenkeeper.io/)
 
 # deadlinks-report-website
 
