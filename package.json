@@ -37,7 +37,7 @@
     "url": "git+https://github.com/telemark/deadlinks-report-website.git"
   },
   "devDependencies": {
-    "coveralls": "3.0.6",
+    "coveralls": "3.0.7",
     "standard": "14.3.1",
     "tap": "14.6.9"
   },
