@@ -42,7 +42,7 @@
     "tap": "14.10.6"
   },
   "dependencies": {
-    "md5": "2.2.1",
+    "md5": "2.3.0",
     "mississippi": "4.0.0",
     "pagelinks": "2.0.1",
     "sitemap-to-array": "6.0.0",
